@@ -1,8 +1,8 @@
 # Class Task
 # Allows for validations
 class Task < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :task_lists
+  belongs_to :user
+  belongs_to :task_list
 
   validates :name, presence: true
 end
