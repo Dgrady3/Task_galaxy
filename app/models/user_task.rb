@@ -1,9 +1,9 @@
 # This table allows for a many to
 # many relationhip between users & task-lists
-class Users_Task < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :tasks_lists
-  has_many :tasks
+class UsersTask < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :task_list
 
-  validates :user_id, presence: true
+  validates :user, presence: true
+  validates :task_list, presence: true
 end
